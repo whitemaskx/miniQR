@@ -4,28 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto Mono" rel="stylesheet">
+    <link rel="stylesheet" href="./spinner.css" type="text/css">
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <script src="./code.js"></script>
     <title>Mini QR generator</title>
 </head>
 <body>
-    <div>
-        <h1>Mini QR Generator</h1>
-        <p>Customizable size and color</p>
-    </div>
-    <div>
-        <form action="submit">
-            <section>
-                <input type="text" name="qrurl" placeholder="Enter URL here">
+    <div id="full-container">
+        <div>
+            <h1>Mini QR Generator</h1>
+            <p>Customizable size and color</p>
+        </div>
+        <div id="container">
+            <form action="submit" class="tform">
+                <input type="url" id="qrurl" name="qrurl" placeholder="Enter URL here">
+                <label for="qrsize">Select the size</label>
                 <select name="qrsize" id="qrsize">
                     <option value="150">150x150px</option>
                     <option value="200">200x200px</option>
                     <option value="300">300x300px</option>
                     <option value="500">500x500px</option>
                 </select>
+                <label for="qrcolor">Pick a color</label>
                 <input type="color" name="qrcolor" id="qrcolor">
-                <input type="submit" value="Generate">
-            </section>
-        </form>
-    </div>
-    <div id="genqr"></div>
-</body>
+                <input type="submit" id="btnSubmit" value="Generate">
+            </form>
+            </div>
+            <div id="genqr">
+                <p id="qrplaceholder">MINI QR GENERATOR</p>
+            </div>
+            <div id="spinner" class="loadingio-spinner-ellipsis-2kyyiotjlae">
+                <div class="ldio-r8hepbuife8">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            </div>
+            </body>
 </html>
